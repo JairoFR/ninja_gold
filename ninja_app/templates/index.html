@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block titulo %}{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-1">
+            <p class="d-inline-flex text-center">Your Gold:</p>
+        </div>
+        <div class="col-2 text-center">
+            <p class="border">{{count}}</p>
+        </div>
+        <div class="col-9 d-flex justify-content-end">
+            <a class="btn btn-primary " href="reset">Reset</a>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Farm</h5>
+                    <p class="card-text mt-4 text-center">(earns/takes 10-20 golds)</p>
+                    <div class="text-center">
+                        <a href="/farm" class="btn btn-primary mt-3">Find Gold</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-3 fondo">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Cave</h5>
+                    <p class="card-text mt-4 text-center">(earns 5-10 golds)</p>
+                    <div class="text-center">
+                        <a href="/cave" class="btn btn-primary mt-3">Find Gold</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">House</h5>
+                    <p class="card-text mt-4 text-center">(earns 2-5 golds)</p>
+                    <div class="text-center">
+                        <a href="/house" class="btn btn-primary mt-3">Find Gold</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card car" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Casino</h5>
+                    <p class="card-text mt-4 text-center">(earns/takes 0-50 golds)</p>
+                    <div class="text-center">
+                        <a href="/casino" class="btn btn-primary mt-3">Find Gold</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <h6 class="mt-5 ms-5">Activities: </h6>
+        <div class="col-10 border mensajes mt-1">
+            {% for mensaje in mensajes%}
+                <p>{{mensaje}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>  
+{% endblock %}
+

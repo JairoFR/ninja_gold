@@ -1,0 +1,9 @@
+
+.card{
+    height: 200px;
+}
+
+.mensajes{
+    min-height: 200px;
+    border-top: 5px solid black;
+}   
